@@ -174,12 +174,7 @@
             var that = this;
             var iteration = this.getIteration();
             
-            //console.log("Theme...", theme);
-            
             return Deft.Promise.all([this.getTheme(), this.calculateTimeboxInfo()]).then({
-            
-           // console.log("...Theme from model...", that._theme);
-            //return this.calculateTimeboxInfo().then({
                 success: function(results) {
                     var theme = results[0].get('Theme');
                     this._checkAndDestroy('#dataContainer');
